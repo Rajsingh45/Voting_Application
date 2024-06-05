@@ -1,0 +1,41 @@
+voting application 
+
+functionality:
+
+1.user able to signup
+2.see the list of candidate
+3.vote one of the candidate,only vote one time
+4.count of votes for each candidate 
+5.user should have aadhar for signup and voting
+6.one admin will be there to manage things and he can't vote
+
+
+-----------------------------------------------
+
+Routes:
+
+user authentication:
+    /signup: POST method cretae user account 
+    /login: POST method login to an existing account via aadhar+password
+
+voting:
+    /candidate: GET method ,get list of candidates
+    /vote/:candidateID: POST method to vote for specific candidate(bjp,inc)
+
+vote counts:
+    /vote/counts: GET the list of candidates sorted by their vote count
+
+user profile:
+    /profile: GET the user's profile information
+    /profile/password:PUT method to change the password
+
+admin candidate mgmt:
+    /candidate: POST- CREATE a new candidate
+    /candidate/:candidateID:PUT-update an existing candidate
+    /candidate/:candidateID:DELETE-DELETE a candidate from election
+
+
+Models:
+
+
+
